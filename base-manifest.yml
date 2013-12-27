@@ -1,0 +1,14 @@
+---
+properties:
+  aaa: avalue  
+  bbb: bvalue
+env:
+  SPRING_PROFILES_ACTIVE: qa  
+  ANOTHER_VAR: justatest
+applications:
+- name: cf-profile-test
+  memory: 512M
+  instances: 1
+  host: cf-profile-test
+  domain: cfapps.io
+  path: target/ex-1.0.0-BUILD-SNAPSHOT.war
