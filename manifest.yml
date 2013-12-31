@@ -1,0 +1,11 @@
+---
+inherit: base-manifest.yml
+env:
+  SPRING_PROFILES_ACTIVE: dev  
+applications:
+- name: ${app-name}
+  memory: 512M
+  instances: 1
+  host: ${app-name}-dev
+  domain: cfapps.io
+  path: target/ex-1.0.0-BUILD-SNAPSHOT.war  
