@@ -1,14 +1,12 @@
 ---
 properties:
-  aaa: avalue  
-  bbb: bvalue
+  app-name: cf-profile-demo  
+
 env:
-  SPRING_PROFILES_ACTIVE: qa  
-  ANOTHER_VAR: justatest
+  ANOTHER_VAR: this was set in base-manifest.yml
 applications:
-- name: cf-profile-test
+- name: ${app-name}
   memory: 512M
   instances: 1
-  host: cf-profile-test
   domain: cfapps.io
   path: target/ex-1.0.0-BUILD-SNAPSHOT.war

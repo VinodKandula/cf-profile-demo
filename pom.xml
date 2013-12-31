@@ -110,11 +110,13 @@
 		</dependency>
 
 		<!-- Allow override of Cloud Foundry behavior -->	
-	    <dependency>
+<!-- 	    <dependency>
 	        <groupId>org.cloudfoundry</groupId>
 	        <artifactId>cloudfoundry-runtime</artifactId>
 	        <version>0.8.4</version>
-	    </dependency>
+	    </dependency> -->
+
+
     
 <dependency>
     <groupId>org.springframework.cloud</groupId>

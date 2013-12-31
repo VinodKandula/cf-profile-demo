@@ -3,9 +3,9 @@ inherit: base-manifest.yml
 env:
   SPRING_PROFILES_ACTIVE: qa  
 applications:
-- name: cf-profile-test
+- name: ${app-name}
   memory: 512M
   instances: 1
-  host: cf-profile-test-qa
+  host: ${app-name}-qa
   domain: cfapps.io
   path: target/ex-1.0.0-BUILD-SNAPSHOT.war  

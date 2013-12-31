@@ -26,7 +26,10 @@
 	
 	<context:component-scan base-package="com.demo.ex" />
 	
-<!-- 	<cloud:properties id="cloudProps"/>-->
 	<context:property-placeholder /> 
 
+<!-- 	Appears to be incompatible with user provided services:
+	<cloud:service-scan/>
+ -->
+ 	<cloud:properties id="cloudProperties"/>
 </beans:beans>

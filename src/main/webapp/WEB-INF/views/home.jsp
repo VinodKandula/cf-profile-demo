@@ -9,19 +9,44 @@
 	Hello world!  
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
-<P>  Profile in use is ${profile}. </P>
-<P>  Profile variable set ${profileVar}. </P>
-<P>  environment variable ${anotherVar}. </P>
-<P>  aaa: ${aaa}. </P>
-<P>  bbb: ${bbb}. </P>
+<P>  The time on the server is: ${serverTime}. </P>
+<P>  Profile in use is: ${profile}. </P>
+<P>  Profile variable set: ${profileVar}. </P>
+<P>  Environment variable example: ${anotherVar}. </P>
 
+<p> 
+Properties:<br/>
 <c:forEach items="${properties}" var="property" >
-   <p> <c:out value="${property}"/></p>
+   <c:out value="${property}"/><br/>
 </c:forEach>
-<P> VCAP Properties: </P>
-<c:forEach items="${vcapProperties}" var="property" >
-   <p> <c:out value="${property}"/></p>
+</p>
+<P> VCAP Services: </P>
+<c:forEach items="${vcapServices}" var="property" >
+   <c:out value="${property}"/><br/>
 </c:forEach>
+
+<p> 
+Cloud Properties:<br/>
+<c:forEach items="${cloudProperties}" var="property" >
+   <c:out value="${property}"/><br/>
+</c:forEach>
+</p>
+
+<p> 
+Beans:<br/>
+<c:forEach items="${beanNames}" var="property" >
+   <c:out value="${property}"/><br/>
+</c:forEach>
+</p>
+
+<p> 
+Services:<br/>
+<c:forEach items="${services}" var="service" >
+	<c:forEach items="${service}" var="property" >
+	   <c:out value="${property}"/><br/>
+	</c:forEach>
+</c:forEach>
+</p>
+
 </body>
 </html>
